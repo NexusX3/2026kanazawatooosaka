@@ -16,40 +16,41 @@
   --muted: #666;
   --muted2: #888;
   --accent: #b8964a;
+  --f: 1;
 }
 
 body {
   background: var(--bg);
   color: var(--text);
   font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 14px;
+  font-size: calc(21px * var(--f));
   line-height: 1.6;
-  padding-bottom: 32px;
-  max-width: 480px;
+  padding-bottom: 48px;
+  max-width: 720px;
   margin: 0 auto;
 }
 
 /* ── HEADER ── */
 .hdr {
-  padding: 32px 20px 20px;
+  padding: 48px 30px 30px;
   border-bottom: 1px solid var(--border);
 }
 .hdr-eyebrow {
-  font-size: 10px;
+  font-size: calc(15px * var(--f));
   letter-spacing: 3px;
   color: var(--muted);
   margin-bottom: 8px;
 }
 .hdr h1 {
-  font-size: 26px;
+  font-size: calc(39px * var(--f));
   font-weight: 300;
   letter-spacing: 3px;
   color: var(--text);
 }
 .hdr-sub {
-  font-size: 11px;
+  font-size: calc(16px * var(--f));
   color: var(--muted);
-  margin-top: 6px;
+  margin-top: 9px;
   letter-spacing: 1px;
 }
 
@@ -64,12 +65,12 @@ body {
 }
 .nav button {
   flex: 1;
-  padding: 14px 0 12px;
+  padding: 21px 0 18px;
   background: none;
   border: none;
   border-bottom: 2px solid transparent;
   color: var(--muted);
-  font-size: 11px;
+  font-size: calc(16px * var(--f));
   letter-spacing: 1.5px;
   cursor: pointer;
   transition: color 0.15s;
@@ -78,50 +79,62 @@ body {
   color: var(--text);
   border-bottom-color: var(--text);
 }
+.nav .font-btn {
+  flex: none;
+  width: 48px;
+  border-left: 1px solid var(--border);
+  font-size: calc(14px * var(--f));
+  letter-spacing: 0;
+  padding: 21px 0 18px;
+  color: var(--muted);
+}
+.nav .font-btn.active {
+  color: var(--muted2);
+}
 
 /* ── SECTIONS ── */
-.sec { display: none; padding: 20px; }
+.sec { display: none; padding: 30px; }
 .sec.on { display: block; }
 
 /* ── OVERVIEW ── */
 .tl-item {
   display: flex;
-  gap: 16px;
-  padding: 16px 0;
+  gap: 24px;
+  padding: 24px 0;
   border-bottom: 1px solid var(--border);
 }
 .tl-item:last-child { border-bottom: none; }
 .tl-left {
-  min-width: 44px;
-  padding-top: 2px;
+  min-width: 66px;
+  padding-top: 3px;
 }
 .tl-date {
-  font-size: 12px;
+  font-size: calc(18px * var(--f));
   font-weight: 500;
   color: var(--text);
 }
 .tl-dow {
-  font-size: 10px;
+  font-size: calc(15px * var(--f));
   color: var(--muted);
   letter-spacing: 0.5px;
 }
 .tl-right {}
 .tl-title {
-  font-size: 14px;
+  font-size: calc(21px * var(--f));
   font-weight: 500;
   margin-bottom: 3px;
 }
 .tl-desc {
-  font-size: 12px;
+  font-size: calc(18px * var(--f));
   color: var(--muted2);
 }
 .badge {
   display: inline-block;
-  font-size: 10px;
-  padding: 2px 8px;
+  font-size: calc(15px * var(--f));
+  padding: 3px 12px;
   border: 1px solid var(--border2);
   color: var(--muted);
-  margin-top: 6px;
+  margin-top: 9px;
   letter-spacing: 0.5px;
 }
 .badge-gold {
@@ -133,42 +146,42 @@ body {
 .day-card {
   border: 1px solid var(--border);
   background: var(--card);
-  margin-bottom: 12px;
+  margin-bottom: 18px;
 }
 .day-hdr {
-  padding: 12px 16px;
+  padding: 18px 24px;
   border-bottom: 1px solid var(--border);
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  gap: 8px;
+  gap: 12px;
 }
 .day-hdr-title {
-  font-size: 12px;
+  font-size: calc(18px * var(--f));
   font-weight: 500;
   letter-spacing: 0.5px;
   white-space: nowrap;
 }
 .day-hdr-sub {
-  font-size: 11px;
+  font-size: calc(16px * var(--f));
   color: var(--muted);
   text-align: right;
   flex-shrink: 1;
 }
-.day-body { padding: 0 16px; }
+.day-body { padding: 0 24px; }
 
 .slot {
   display: flex;
-  gap: 12px;
-  padding: 13px 0;
+  gap: 18px;
+  padding: 20px 0;
   border-bottom: 1px solid var(--border);
 }
 .slot:last-child { border-bottom: none; }
 .slot-icon {
-  min-width: 42px;
-  width: 42px;
+  min-width: 63px;
+  width: 63px;
   color: var(--muted);
-  font-size: 11px;
+  font-size: calc(16px * var(--f));
   text-align: right;
   padding-top: 3px;
   font-style: normal;
@@ -176,20 +189,20 @@ body {
   flex-shrink: 0;
 }
 .slot-title {
-  font-size: 13px;
+  font-size: calc(20px * var(--f));
   font-weight: 500;
   margin-bottom: 3px;
 }
 .slot-detail {
-  font-size: 12px;
+  font-size: calc(18px * var(--f));
   color: var(--muted2);
   line-height: 1.6;
 }
 .slot-addr {
-  font-size: 11px;
+  font-size: calc(16px * var(--f));
   color: var(--muted);
-  margin-top: 5px;
-  padding-left: 10px;
+  margin-top: 8px;
+  padding-left: 15px;
   border-left: 1px solid var(--border2);
 }
 .slot-addr a {
@@ -199,25 +212,39 @@ body {
 }
 .slot-addr a:active { opacity: 0.5; }
 .slot-note {
-  font-size: 11px;
+  font-size: calc(16px * var(--f));
   color: var(--accent);
-  margin-top: 5px;
+  margin-top: 8px;
+}
+
+/* ── SPLIT LABEL (11/03 分開行動) ── */
+.split-label {
+  font-size: calc(12px * var(--f));
+  letter-spacing: 2.5px;
+  color: var(--muted);
+  padding: 16px 0 4px;
+  border-top: 1px solid var(--border2);
+  margin-top: 2px;
+}
+.split-label:first-child {
+  border-top: none;
+  padding-top: 8px;
 }
 
 /* ── PREP ── */
-.prep-grp { margin-bottom: 28px; }
+.prep-grp { margin-bottom: 42px; }
 .prep-grp-title {
-  font-size: 10px;
+  font-size: calc(15px * var(--f));
   letter-spacing: 2.5px;
   color: var(--muted);
-  margin-bottom: 10px;
-  padding-bottom: 8px;
+  margin-bottom: 15px;
+  padding-bottom: 12px;
   border-bottom: 1px solid var(--border);
 }
 .prep-item {
   display: flex;
-  gap: 12px;
-  padding: 12px 0;
+  gap: 18px;
+  padding: 18px 0;
   border-bottom: 1px solid var(--border);
   align-items: flex-start;
   cursor: pointer;
@@ -228,19 +255,18 @@ body {
 .prep-item:last-child { border-bottom: none; }
 .prep-item:active { opacity: 0.6; }
 .prep-box {
-  width: 14px;
-  height: 14px;
-  min-width: 14px;
+  width: 21px;
+  height: 21px;
+  min-width: 21px;
   border: 1px solid var(--border2);
-  margin-top: 3px;
+  margin-top: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 10px;
+  font-size: calc(15px * var(--f));
   flex-shrink: 0;
   transition: background 0.15s, border-color 0.15s;
 }
-/* checked state */
 .prep-item.checked .prep-box {
   background: var(--text);
   border-color: var(--text);
@@ -256,23 +282,23 @@ body {
 .prep-item.checked .prep-sub {
   opacity: 0.4;
 }
-.prep-title { font-size: 13px; margin-bottom: 3px; }
+.prep-title { font-size: calc(20px * var(--f)); margin-bottom: 5px; }
 .prep-title.urgent { color: var(--accent); }
-.prep-sub { font-size: 11px; color: var(--muted2); line-height: 1.6; }
+.prep-sub { font-size: calc(16px * var(--f)); color: var(--muted2); line-height: 1.6; }
 
 /* ── NOTES ── */
 .note-item {
-  padding: 16px 0;
+  padding: 24px 0;
   border-bottom: 1px solid var(--border);
 }
 .note-item:last-child { border-bottom: none; }
 .note-title {
-  font-size: 13px;
+  font-size: calc(20px * var(--f));
   font-weight: 500;
-  margin-bottom: 7px;
+  margin-bottom: 10px;
 }
 .note-body {
-  font-size: 12px;
+  font-size: calc(18px * var(--f));
   color: var(--muted2);
   line-height: 1.8;
 }
@@ -287,6 +313,7 @@ body {
   <button onclick="show('daily',this)">行程</button>
   <button onclick="show('prep',this)">準備</button>
   <button onclick="show('notes',this)">注意</button>
+  <button class="font-btn" id="fontBtn" onclick="cycleFont()">A</button>
 </nav>
 
 <div class="hdr">
@@ -307,7 +334,7 @@ body {
     </div>
     <div class="tl-right">
       <div class="tl-title">抵達金澤</div>
-      <div class="tl-desc">IT252 桃園 → 小松 · 晚餐壽司</div>
+      <div class="tl-desc">IT252 11:50 桃園 → 15:35 小松 · 晚餐燒肉</div>
       <span class="badge">APA Kanazawa Ekimae</span>
     </div>
   </div>
@@ -330,8 +357,8 @@ body {
       <div class="tl-dow">Sat</div>
     </div>
     <div class="tl-right">
-      <div class="tl-title">金澤 → 滋賀 → 大阪</div>
-      <div class="tl-desc">琵琶湖 · 心齋橋萬聖節</div>
+      <div class="tl-title">金澤 → 敦賀 → 大阪</div>
+      <div class="tl-desc">敦賀観光 · 心齋橋萬聖節</div>
       <span class="badge badge-gold">退房 · 入住大阪</span>
     </div>
   </div>
@@ -343,8 +370,8 @@ body {
     </div>
     <div class="tl-right">
       <div class="tl-title">京都</div>
-      <div class="tl-desc">TeamLab · 任天堂博物館</div>
-      <span class="badge">需事先抽籤</span>
+      <div class="tl-desc">TeamLab · 琉璃光院 · 百鬼夜行（太秦映画村）</div>
+      <span class="badge badge-gold">已買票 TeamLab 09:30</span>
     </div>
   </div>
 
@@ -365,8 +392,8 @@ body {
       <div class="tl-dow">Tue</div>
     </div>
     <div class="tl-right">
-      <div class="tl-title">大阪市區</div>
-      <div class="tl-desc">哥吉拉 0.0 首映 · 日本橋 · BooBoo 豬肉鍋</div>
+      <div class="tl-title">大阪市區 · 分開行動</div>
+      <div class="tl-desc">哥吉拉 0.0 首映 · 日本橋 · 17:00 集合 · BooBoo 豬肉鍋</div>
     </div>
   </div>
 
@@ -377,7 +404,7 @@ body {
     </div>
     <div class="tl-right">
       <div class="tl-title">回台灣</div>
-      <div class="tl-desc">BR129 關西機場 → 桃園</div>
+      <div class="tl-desc">BR129 長榮 18:30 關西 → 20:30 桃園 · 接送返台中</div>
     </div>
   </div>
 
@@ -396,27 +423,35 @@ body {
     </div>
     <div class="day-body">
       <div class="slot">
-        <i class="slot-icon">09:00</i>
+        <i class="slot-icon">07:20</i>
+        <div>
+          <div class="slot-title">機場接送 — 台中出發</div>
+          <div class="slot-detail">台中捷運北屯總站集合 · 預約單號 D3888389 · 行車約 2 小時</div>
+          <div class="slot-note">預計 09:20 抵達桃園機場 · 距起飛約 2hr30min，足夠 LCC 辦理報到</div>
+        </div>
+      </div>
+      <div class="slot">
+        <i class="slot-icon">11:50</i>
         <div>
           <div class="slot-title">IT252 桃園 → 小松</div>
-          <div class="slot-detail">虎航 · 抵小松約 13:00 · 搭北陸鐵道「小松エアポートライナー」至金澤駅，約 40 分</div>
-          <div class="slot-note">JR Pass 不適用機場巴士，需另購票 ¥1,250</div>
+          <div class="slot-detail">台灣虎航 · A320 · 飛行約 2hr45min · 抵小松 15:35（日本時間）</div>
+          <div class="slot-note">JR Pass 不適用機場巴士，另購票 ¥1,250 搭北陸鐵道至金澤駅約 40 分</div>
         </div>
       </div>
       <div class="slot">
-        <i class="slot-icon">15:00</i>
+        <i class="slot-icon">16:30</i>
         <div>
-          <div class="slot-title">近江町市場</div>
-          <div class="slot-detail">直接在市場內採購海鮮丼或試吃，晚場部分店家已關，重點逛二樓水産棟</div>
-          <div class="slot-addr">石川県金沢市上近江町 50</div>
+          <div class="slot-title">抵金澤 · 放行李</div>
+          <div class="slot-detail">小松機場 15:35 → 北陸鐵道バス → 金澤駅 16:15–16:30 · 先行寄放行李或辦早到 check-in</div>
+          <div class="slot-addr">石川県金沢市広岡 2-13-1（APA Hotel Kanazawa Ekimae）</div>
         </div>
       </div>
       <div class="slot">
-        <i class="slot-icon">18:00</i>
+        <i class="slot-icon">18:30</i>
         <div>
-          <div class="slot-title">晚餐 — 廻転寿司 もりもり寿し 本店</div>
-          <div class="slot-detail">金澤在地人氣迴轉壽司，鮮度高，平日等候約 20–40 分</div>
-          <div class="slot-addr">石川県金沢市馬場 2-1-9</div>
+          <div class="slot-title">晚餐 — 焼肉 大判 金沢駅前店</div>
+          <div class="slot-detail">金澤駅前在地燒肉，套餐每人約 ¥4,500–6,000（台幣約 1,000–1,400）· 建議事先訂位</div>
+          <div class="slot-addr">石川県金沢市広岡（金沢駅前）</div>
         </div>
       </div>
       <div class="slot">
@@ -475,6 +510,15 @@ body {
         </div>
       </div>
       <div class="slot">
+        <i class="slot-icon">16:00</i>
+        <div>
+          <div class="slot-title">東茶屋街 散策</div>
+          <div class="slot-detail">金澤三大茶屋街中規模最大 · 江戸時代の町家が現役の茶屋・工芸店・金箔カフェに · ひがし茶屋街のメイン通りをゆっくり散策 · 約 1.5hr</div>
+          <div class="slot-addr">石川県金沢市東山 1 丁目（ひがし茶屋街）</div>
+          <div class="slot-note">カフェ・茶店は 17:00–18:00 閉店が多い · 金沢駅から徒歩 25 分またはバス 橋場町下車</div>
+        </div>
+      </div>
+      <div class="slot">
         <i class="slot-icon">18:30</i>
         <div>
           <div class="slot-title">晚餐 — 金澤まいもん寿司 片町本店</div>
@@ -488,46 +532,62 @@ body {
   <!-- DAY 3 -->
   <div class="day-card">
     <div class="day-hdr">
-      <div class="day-hdr-title">10/31 Sat · 金澤 → 大阪</div>
-      <div class="day-hdr-sub">心齋橋萬聖節</div>
+      <div class="day-hdr-title">10/31 Sat · 金澤 → 敦賀 → 大阪</div>
+      <div class="day-hdr-sub">敦賀観光 · 心齋橋萬聖節</div>
     </div>
     <div class="day-body">
       <div class="slot">
         <i class="slot-icon">09:00</i>
         <div>
-          <div class="slot-title">退房 · 行李宅配</div>
-          <div class="slot-detail">大件行李以 ヤマト運輸 宅配至大阪旅館（前一天寄出）· 輕裝出發</div>
+          <div class="slot-title">退房 · 帶行李出發</div>
+          <div class="slot-detail">行李箱帶上新幹線 · 敦賀駅 coin locker 存放後輕裝遊覽 · 再搭サンダーバード帶往大阪</div>
         </div>
       </div>
       <div class="slot">
-        <i class="slot-icon">10:00</i>
+        <i class="slot-icon">09:46</i>
         <div>
-          <div class="slot-title">金澤 → 大津（滋賀）</div>
-          <div class="slot-detail">JR 特急 サンダーバード → 敦賀，轉北陸新幹線 → 米原，轉琵琶湖線 → 大津 · 全程約 2hr · JR Pass 全程適用</div>
+          <div class="slot-title">金澤 → 敦賀（北陸新幹線 かがやき）</div>
+          <div class="slot-detail">金澤駅 09:46 発 · 約 38 分 · 敦賀着 10:24 · JR Pass 指定席適用</div>
+          <div class="slot-note">かがやき は全車指定席 · 事前座席指定を · 抵敦賀後先至駅内 coin locker 存行李（大型 ¥800 · 數量有限，建議早到）</div>
         </div>
       </div>
       <div class="slot">
-        <i class="slot-icon">12:30</i>
+        <i class="slot-icon">10:30</i>
         <div>
-          <div class="slot-title">大津港 · 琵琶湖湖岸緑地</div>
-          <div class="slot-detail">湖岸步道從大津港延伸至なぎさ公園，可直接走至湖邊 · 停留約 1.5hr</div>
-          <div class="slot-addr">滋賀県大津市浜大津 4-1（大津港）</div>
+          <div class="slot-title">気比神宮</div>
+          <div class="slot-detail">日本三大鳥居の一つ · 越前国一宮 · 敦賀駅から徒歩約 10 分 · 参拝約 30–40 分</div>
+          <div class="slot-addr">福井県敦賀市曙町 11-68</div>
         </div>
       </div>
       <div class="slot">
-        <i class="slot-icon">14:00</i>
+        <i class="slot-icon">11:15</i>
         <div>
-          <div class="slot-title">午餐 — 湖里庵（近江牛）</div>
-          <div class="slot-detail">大津港周邊近江牛料理餐廳 · 或改往なぎさ公園附近的定食店</div>
-          <div class="slot-addr">滋賀県大津市浜大津 1-2-33</div>
+          <div class="slot-title">敦賀赤レンガ倉庫</div>
+          <div class="slot-detail">明治期の赤レンガ倉庫をリノベ · 鉄道と港の博物館 + 海鮮マルシェ · 敦賀駅から徒歩 15 分またはタクシー</div>
+          <div class="slot-addr">福井県敦賀市金ケ崎町 4-1</div>
         </div>
       </div>
       <div class="slot">
-        <i class="slot-icon">15:30</i>
+        <i class="slot-icon">12:15</i>
         <div>
-          <div class="slot-title">大津 → 大阪（心齋橋）</div>
-          <div class="slot-detail">JR 琵琶湖線 → 大阪駅，轉地下鐵御堂筋線至心齋橋 · 約 40 分 · JR Pass 適用至大阪駅</div>
-          <div class="slot-note">建議 17:30 前抵達大阪完成 Check-in</div>
+          <div class="slot-title">海鮮ランチ — 敦賀港周辺</div>
+          <div class="slot-detail">赤レンガ倉庫内または港周辺の食堂で越前がにシーズン直前の海鮮丼・焼き魚定食 · 予算 ¥1,500–2,500</div>
+          <div class="slot-addr">福井県敦賀市金ケ崎町（赤レンガ倉庫周辺）</div>
+        </div>
+      </div>
+      <div class="slot">
+        <i class="slot-icon">13:05</i>
+        <div>
+          <div class="slot-title">敦賀 → 大阪（特急 サンダーバード）</div>
+          <div class="slot-detail">敦賀駅 13:05 頃発 · 途中停車 京都 13:55 → 大阪（大阪駅）14:27 着 · 約 1hr22min · JR Pass 指定席適用</div>
+          <div class="slot-note">乗車前に coin locker から行李を回収すること · 指定席は早めに予約を</div>
+        </div>
+      </div>
+      <div class="slot">
+        <i class="slot-icon">15:00</i>
+        <div>
+          <div class="slot-title">大阪 Check-in · 休憩</div>
+          <div class="slot-detail">行李已於 10/30 宅配抵達 · 整理後準備萬聖節夜間出行</div>
         </div>
       </div>
       <div class="slot">
@@ -552,55 +612,83 @@ body {
   <div class="day-card">
     <div class="day-hdr">
       <div class="day-hdr-title">11/01 Sun · 京都</div>
-      <div class="day-hdr-sub">TeamLab + 任天堂博物館</div>
+      <div class="day-hdr-sub">TeamLab · 琉璃光院 · 太秦映画村 百鬼夜行</div>
     </div>
     <div class="day-body">
       <div class="slot">
-        <i class="slot-icon">09:00</i>
+        <i class="slot-icon">08:20</i>
         <div>
-          <div class="slot-title">大阪 → 京都</div>
-          <div class="slot-detail">JR 大阪駅 → 京都駅 · 約 15 分 · JR Pass 適用</div>
+          <div class="slot-title">大阪 → 京都（JR 新快速）</div>
+          <div class="slot-detail">大阪駅 08:20 発 → 京都駅 08:32 着 · 約 12 分 · JR Pass 適用</div>
         </div>
       </div>
       <div class="slot">
         <i class="slot-icon">09:30</i>
         <div>
-          <div class="slot-title">チームラボ バイオヴォルテックス 京都</div>
-          <div class="slot-detail">2025年10月開幕常設展 · 50+ 件作品 · 約需 2–2.5hr · 京都駅八条口徒步 7 分</div>
-          <div class="slot-addr">京都市南区東九条東岩本町 21-5</div>
-          <div class="slot-note">建議預先官網購票，假日易售罄</div>
+          <div class="slot-title">TeamLab 京都 — 入場（購票已確認）</div>
+          <div class="slot-detail">09:30 入場枠 確認済 · teamlab.art/e/kyoto/ · デジタルアート全館体験 · 滞在約 2hr</div>
+          <div class="slot-note">入場 QR コードを事前スクリーンショット保存を推奨</div>
         </div>
       </div>
       <div class="slot">
-        <i class="slot-icon">12:30</i>
+        <i class="slot-icon">11:45</i>
         <div>
-          <div class="slot-title">午餐 — 京都駅 The Cube 11F</div>
-          <div class="slot-detail">京都駅伊勢丹直結，多種料理選擇，省去移動時間</div>
-          <div class="slot-addr">京都市下京区烏丸通塩小路下ル（JR京都駅ビル内）</div>
+          <div class="slot-title">TeamLab → 出町柳（移動）</div>
+          <div class="slot-detail">タクシーまたは市バスで出町柳駅へ · 約 20–30 分</div>
         </div>
       </div>
       <div class="slot">
-        <i class="slot-icon">13:30</i>
+        <i class="slot-icon">12:15</i>
         <div>
-          <div class="slot-title">京都駅 → 近鉄小倉駅</div>
-          <div class="slot-detail">近鉄京都線 → 近鉄小倉駅下車 · 約 25 分</div>
-          <div class="slot-note">近鉄不適用 JR Pass，需另購票 · 約 ¥510</div>
+          <div class="slot-title">叡山電鉄 出町柳 → 八瀬比叡山口</div>
+          <div class="slot-detail">所要約 15 分 · 運賃 ¥270 · JR Pass 不適用（IC カード使用）</div>
         </div>
       </div>
       <div class="slot">
-        <i class="slot-icon">14:30</i>
+        <i class="slot-icon">12:40</i>
         <div>
-          <div class="slot-title">任天堂博物館</div>
-          <div class="slot-detail">近鉄小倉駅徒步約 5 分 · 需事前每月抽籤（見「注意」說明）· 建議預留 2–3hr</div>
-          <div class="slot-addr">京都府宇治市小倉町神楽田 56</div>
-          <div class="slot-note">票價 ¥3,300（18歲以上）· 11/1 入場需於 8月申請抽籤</div>
+          <div class="slot-title">瑠璃光院 — 秋の特別拝観</div>
+          <div class="slot-detail">書院の床や机に映る紅葉の逆さもみじが見どころ · 参拝料 ¥2,000 · 拝観約 1hr</div>
+          <div class="slot-addr">京都市左京区上高野東山 55</div>
+          <div class="slot-note">未購票 · 拝観期間 10/1–12/13 · 事前にオンライン購票推奨（현장 窗口 も可能だが混雑時は入場制限あり）</div>
         </div>
       </div>
       <div class="slot">
-        <i class="slot-icon">18:30</i>
+        <i class="slot-icon">14:00</i>
         <div>
-          <div class="slot-title">晚餐 — 返回大阪・難波周邊</div>
-          <div class="slot-detail">近鉄小倉 → 京都 → JR → 大阪 · 難波または梅田の居酒屋で夕食</div>
+          <div class="slot-title">叡電 → 出町柳 → 太秦映画村（移動 + ランチ）</div>
+          <div class="slot-detail">叡電で出町柳戻り（15 分）→ 市バス 91 系統で太秦映画村前下車（約 40 分）· 移動中またはバス沿線で昼食を</div>
+          <div class="slot-note">市バス一日乗車券（¥700）があれば便利</div>
+        </div>
+      </div>
+      <div class="slot">
+        <i class="slot-icon">15:30</i>
+        <div>
+          <div class="slot-title">太秦映画村 — 怪々 YOKAI 祭 入村</div>
+          <div class="slot-detail">開催期間 9/12–11/29 · 1DAY 入村券 ¥3,800（大人）· 江戸の町でYOKAI 展示・体験・グルメ</div>
+          <div class="slot-addr">京都市右京区太秦東蜂岡町 10（JR 花園駅または太秦天神川駅から徒歩 5–10 分）</div>
+          <div class="slot-note">11/1（日）は 10:00–21:00 開村 · 休村日なし</div>
+        </div>
+      </div>
+      <div class="slot">
+        <i class="slot-icon">17:30</i>
+        <div>
+          <div class="slot-title">KAIKAI YOKAI PARADE（参加型）</div>
+          <div class="slot-detail">週末・祝日限定 17:30 開催 · 妖怪キャラクターと一緒に江戸の町を練り歩く参加型パレード</div>
+        </div>
+      </div>
+      <div class="slot">
+        <i class="slot-icon">19:30</i>
+        <div>
+          <div class="slot-title">うずまさ百鬼夜行（観覧型ショー）</div>
+          <div class="slot-detail">週末・祝日限定 19:30 開催 · TERUPOP 振付による妖怪ダンスエンタメ · 音楽・舞踊・武打融合</div>
+        </div>
+      </div>
+      <div class="slot">
+        <i class="slot-icon">21:00</i>
+        <div>
+          <div class="slot-title">太秦 → 大阪 帰還</div>
+          <div class="slot-detail">JR 嵯峨野線 花園駅（徒歩 8 分）→ 京都駅 → JR 新快速 → 大阪駅 · 約 30 分 · JR Pass 適用</div>
         </div>
       </div>
     </div>
@@ -626,7 +714,7 @@ body {
           <div class="slot-title">USJ 開園 — 白天遊覽</div>
           <div class="slot-detail">Wizarding World of Harry Potter、Super Nintendo World 等人氣區域 · 開園即衝人氣設施</div>
           <div class="slot-addr">大阪府大阪市此花区桜島 2-1-33</div>
-          <div class="slot-note">2026年10月詳細活動待公布 · 建議同步購入 Express Pass</div>
+          <div class="slot-note">2026年10月詳細活動待公布 · Express Pass 請至<a href="https://store.usj.co.jp/ja/jp/store/c/expresspass/EXP0103" target="_blank" rel="noopener" style="color:inherit;border-bottom:1px solid #b8964a;">官網</a>購買</div>
         </div>
       </div>
       <div class="slot">
@@ -650,9 +738,12 @@ body {
   <div class="day-card">
     <div class="day-hdr">
       <div class="day-hdr-title">11/03 Tue · 大阪市區</div>
-      <div class="day-hdr-sub">哥吉拉 · 日本橋 · BooBoo</div>
+      <div class="day-hdr-sub">分開行動 · 17:00 集合</div>
     </div>
     <div class="day-body">
+
+      <div class="split-label">本人</div>
+
       <div class="slot">
         <i class="slot-icon">09:00</i>
         <div>
@@ -666,7 +757,7 @@ body {
         <i class="slot-icon">12:00</i>
         <div>
           <div class="slot-title">午餐 — 日本橋 神座拉麵</div>
-          <div class="slot-detail">日本橋周邊多家選擇，神座（かむくら）為大阪在地連鎖，24hr 營業</div>
+          <div class="slot-detail">神座（かむくら）大阪在地連鎖，24hr 營業</div>
           <div class="slot-addr">大阪府大阪市浪速区日本橋 4-6-3</div>
         </div>
       </div>
@@ -678,6 +769,28 @@ body {
           <div class="slot-addr">大阪府大阪市浪速区日本橋 4–5 丁目</div>
         </div>
       </div>
+
+      <div class="split-label">朋友 — 分開行動</div>
+
+      <div class="slot">
+        <i class="slot-icon">全天</i>
+        <div>
+          <div class="slot-title">難波 · 心齋橋 逛街</div>
+          <div class="slot-detail">心齋橋筋商店街 → アメリカ村（古著 · 獨立小店）→ LOFT 心齋橋店（文具 · 生活雜貨）→ ヴィレッジヴァンガード 道頓堀店（特色文創）</div>
+          <div class="slot-addr">大阪府大阪市中央区心斎橋筋 2 丁目（心齋橋筋商店街）</div>
+        </div>
+      </div>
+
+      <div class="split-label">集合</div>
+
+      <div class="slot">
+        <i class="slot-icon">17:00</i>
+        <div>
+          <div class="slot-title">難波車站集合</div>
+          <div class="slot-detail">Osaka Metro 御堂筋線 なんば駅 改札外</div>
+          <div class="slot-addr">大阪府大阪市中央区難波（なんば駅）</div>
+        </div>
+      </div>
       <div class="slot">
         <i class="slot-icon">18:30</i>
         <div>
@@ -687,6 +800,7 @@ body {
           <div class="slot-note">建議事先預約 · ホットペッパーグルメ 可線上訂位</div>
         </div>
       </div>
+
     </div>
   </div>
 
@@ -694,22 +808,37 @@ body {
   <div class="day-card">
     <div class="day-hdr">
       <div class="day-hdr-title">11/04 Wed · 回台灣</div>
-      <div class="day-hdr-sub">BR129 關西 → 桃園</div>
+      <div class="day-hdr-sub">BR129 長榮 18:30 關西 → 20:30 桃園</div>
     </div>
     <div class="day-body">
       <div class="slot">
-        <i class="slot-icon">07:00</i>
+        <i class="slot-icon">上午</i>
         <div>
-          <div class="slot-title">大阪市區 → 關西機場</div>
-          <div class="slot-detail">JR 特急 はるか · 大阪駅 or 新大阪→關西機場 · 約 75 分 · JR Pass 適用</div>
-          <div class="slot-note">建議起飛前 3hr 出發 · 假日早上排隊安檢較長</div>
+          <div class="slot-title">大阪 最後散步 · 採購</div>
+          <div class="slot-detail">梅田・心齋橋 自由活動 · 14:00 前退房並前往大阪駅</div>
         </div>
       </div>
       <div class="slot">
-        <i class="slot-icon">—</i>
+        <i class="slot-icon">14:00</i>
+        <div>
+          <div class="slot-title">大阪駅 → 關西機場</div>
+          <div class="slot-detail">JR 特急 はるか · 大阪駅 or 新大阪 → 關西機場 · 約 75 分 · JR Pass 適用</div>
+          <div class="slot-note">15:30 抵達關西機場 · 距起飛 3hr，辦理報到 + 出境</div>
+        </div>
+      </div>
+      <div class="slot">
+        <i class="slot-icon">18:30</i>
         <div>
           <div class="slot-title">BR129 關西 → 桃園</div>
-          <div class="slot-detail">星宇航空 · 確認行李托運重量，大型模型玩具請提前規劃或宅配至機場</div>
+          <div class="slot-detail">長榮航空 · Boeing 787-10 · 飛行約 3hr · 抵桃園 20:30（台灣時間）</div>
+        </div>
+      </div>
+      <div class="slot">
+        <i class="slot-icon">20:30</i>
+        <div>
+          <div class="slot-title">機場接送 — 返台中</div>
+          <div class="slot-detail">桃園機場出境後搭車 · 預約單號 D3888343 · 行車約 2 小時</div>
+          <div class="slot-note">預計約 22:30 抵台中捷運北屯總站</div>
         </div>
       </div>
     </div>
@@ -725,27 +854,27 @@ body {
   <div class="prep-grp">
     <div class="prep-grp-title">立即處理</div>
 
-    <div class="prep-item" id="c1" onclick="toggle('c1')">
-      <div class="prep-box"></div>
-      <div>
-        <div class="prep-title urgent">任天堂博物館抽籤（8月申請）</div>
-        <div class="prep-sub">11/1 入場 → 需於 2026 年 8 月申請 · 登入任天堂帳號 → museum.nintendo.com → 線上抽選 · 每月抽籤，中籤後 7 日內付款 · 票價 ¥3,300 / 人</div>
-      </div>
-    </div>
-
     <div class="prep-item" id="c2" onclick="toggle('c2')">
       <div class="prep-box"></div>
       <div>
         <div class="prep-title urgent">JR Pass 關西・北陸エリアパス 購買</div>
-        <div class="prep-sub">出發前於 KKday / Klook / JR 官網購入 · 覆蓋範圍：小松→金澤（巴士除外）、金澤↔富山・冰見線、金澤→大阪、大阪→京都、USJ 夢咲線、JR はるか 至關西機場</div>
+        <div class="prep-sub">出發前於 KKday / Klook / JR 官網購入 · 覆蓋範圍：金澤→富山・冰見線、金澤→大阪、大阪→京都、USJ 夢咲線、JR はるか 至關西機場</div>
       </div>
     </div>
 
     <div class="prep-item" id="c3" onclick="toggle('c3')">
       <div class="prep-box"></div>
       <div>
-        <div class="prep-title urgent">TeamLab 京都 門票預購</div>
-        <div class="prep-sub">teamlab.art/e/kyoto/ 官網或 Klook 購入 · 11/1 為週日，建議 1–2 個月前購票避免售罄</div>
+        <div class="prep-title">TeamLab 京都 門票</div>
+        <div class="prep-sub">teamlab.art/e/kyoto/ · 11/1（Sun）09:30 入場枠 購票已確認 · 出發前截圖 QR 碼備用</div>
+      </div>
+    </div>
+
+    <div class="prep-item" id="c3b" onclick="toggle('c3b')">
+      <div class="prep-box"></div>
+      <div>
+        <div class="prep-title urgent">瑠璃光院 秋の特別拝観 購票</div>
+        <div class="prep-sub">11/1（Sun）13:00 前後の入場枠を狙う · 公式サイト または 旅行サイトで事前購入 · 参拝料 ¥2,000 · 拝観期間 10/1–12/13</div>
       </div>
     </div>
 
@@ -753,7 +882,7 @@ body {
       <div class="prep-box"></div>
       <div>
         <div class="prep-title urgent">USJ 門票 + Express Pass</div>
-        <div class="prep-sub">usj.co.jp 官網預購 · 萬聖節期間人潮龐大，建議同步購入 Express Pass · 待 2026 年活動公布後購買</div>
+        <div class="prep-sub">門票：usj.co.jp 官網預購<br>Express Pass：<a href="https://store.usj.co.jp/ja/jp/store/c/expresspass/EXP0103" target="_blank" rel="noopener" style="color:inherit;border-bottom:1px solid #2a2a2a;">官網購買連結</a> · 萬聖節期間人潮龐大，強烈建議同步購入 · 待 2026 年活動公布後購買</div>
       </div>
     </div>
   </div>
@@ -816,14 +945,6 @@ body {
     <div class="prep-item" id="c11" onclick="toggle('c11')">
       <div class="prep-box"></div>
       <div>
-        <div class="prep-title">萬聖節仮裝服裝</div>
-        <div class="prep-sub">選擇輕便易移動款式 · 管制區禁止攜帶酒精</div>
-      </div>
-    </div>
-
-    <div class="prep-item" id="c12" onclick="toggle('c12')">
-      <div class="prep-box"></div>
-      <div>
         <div class="prep-title">薄外套 + 折傘</div>
         <div class="prep-sub">金澤 10 月均溫 12–18°C，早晚涼 · 金澤多陰雨天氣</div>
       </div>
@@ -838,14 +959,12 @@ body {
 <div id="notes" class="sec">
 
   <div class="note-item">
-    <div class="note-title">任天堂博物館 抽籤流程</div>
+    <div class="note-title">航班時刻</div>
     <div class="note-body">
-      1. 建立任天堂帳號（英文 / 日文介面）<br>
-      2. museum.nintendo.com → 申請入場抽選<br>
-      3. 申請時間：入場月份 3 個月前（11/1 入場 → <b>8 月份申請</b>）<br>
-      4. 結果公布：2 個月前（約 9 月初）<br>
-      5. 中籤後 7 日內付款 · 票價 ¥3,300/人<br>
-      6. 入場當日憑護照核對，不可轉讓
+      <b>去程 IT252</b>　台灣虎航　桃園 11:50 → 小松 15:35（日本時間）· 飛行約 2hr45min<br><br>
+      <b>回程 BR129</b>　長榮航空　關西 18:30（日本時間）→ 桃園 20:30（台灣時間）· 飛行約 3hr<br><br>
+      <b>機場接送 去程</b>　台中北屯總站 07:20 集合 → 09:20 抵桃園 · 單號 D3888389<br>
+      <b>機場接送 回程</b>　桃園 20:30 出境後搭車 → 約 22:30 北屯總站 · 單號 D3888343
     </div>
   </div>
 
@@ -853,15 +972,17 @@ body {
     <div class="note-title">JR Pass 適用 / 不適用範圍</div>
     <div class="note-body">
       <b>適用：</b>JR 北陸本線、冰見線、サンダーバード / しらさぎ、北陸新幹線（部分）、JR 琵琶湖線・神戸線、JR 大阪環状線 + 夢咲線（USJ）、JR はるか（關西機場）<br><br>
-      <b>不適用：</b>小松機場巴士、近鉄（任天堂博物館往返）、大阪市區地下鐵・御堂筋線、阪急・阪神電車
+      <b>不適用：</b>小松機場巴士、叡山電鉄（琉璃光院往返）、大阪市區地下鐵・御堂筋線、阪急・阪神電車
     </div>
   </div>
 
   <div class="note-item">
-    <div class="note-title">滋賀停留可行性</div>
+    <div class="note-title">敦賀停留 交通整理</div>
     <div class="note-body">
-      金澤→大阪途中停大津完全順路，JR Pass 全程適用。大津港湖岸步道景色開闊，停留 1.5hr 輕鬆。若時間充裕可延伸至石山寺（秋季楓葉，離大津駅約 10 分）。<br><br>
-      注意：10/31 是萬聖節，心齋橋夜間人潮大，建議 <b>18:00 前</b> 抵達大阪完成 Check-in。
+      <b>金澤 → 敦賀</b>　北陸新幹線 かがやき（JR Pass 適用）· 09:46 発 → 10:24 着 · 約 38 分<br><br>
+      <b>敦賀 → 大阪（梅田）</b>　特急 サンダーバード（JR Pass 適用）· 13:05 発 → 14:27 着 · 約 1hr22min<br><br>
+      敦賀駅から気比神宮まで徒歩 10 分、赤レンガ倉庫まで徒歩 15 分。駅前は小規模な街なので移動は徒歩で十分。<br><br>
+      注意：10/31 は萬聖節，心齋橋夜間の人出が多いため、<b>18:00 前</b>に大阪入りを推奨。
     </div>
   </div>
 
@@ -889,7 +1010,7 @@ body {
   <div class="note-item">
     <div class="note-title">購物行李規劃</div>
     <div class="note-body">
-      日本橋（11/3）可能購入模型或玩具，請注意 BR129 星宇航空托運限重（確認機票艙等）。大型或脆弱商品建議當日宅配至旅館或機場。
+      日本橋（11/3）可能購入模型或玩具，請注意 BR129 長榮航空托運限重（確認機票艙等）。大型或脆弱商品建議當日宅配至旅館或機場。
     </div>
   </div>
 
@@ -929,13 +1050,37 @@ function toggle(id) {
   } catch(e) {}
 }
 
-document.addEventListener('DOMContentLoaded', loadChecks);
+// ── Font size cycling ──
+const FONT_SCALES = [1, 1.2, 1.4, 1.6];
+const FONT_LABELS = ['A', 'A⁺', 'A⁺⁺', 'A⁺⁺⁺'];
+let fontLevel = 0;
+
+function applyFont(lv) {
+  document.documentElement.style.setProperty('--f', FONT_SCALES[lv]);
+  const btn = document.getElementById('fontBtn');
+  btn.textContent = FONT_LABELS[lv];
+  btn.classList.toggle('active', lv > 0);
+}
+
+function cycleFont() {
+  fontLevel = (fontLevel + 1) % FONT_SCALES.length;
+  applyFont(fontLevel);
+  try { localStorage.setItem('itinerary_font', fontLevel); } catch(e) {}
+}
 
 // ── Address → Google Maps links ──
 document.querySelectorAll('.slot-addr').forEach(el => {
   const addr = el.textContent.trim();
   const url = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(addr);
   el.innerHTML = '<a href="' + url + '" target="_blank" rel="noopener">' + el.innerHTML + '</a>';
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  loadChecks();
+  try {
+    const saved = parseInt(localStorage.getItem('itinerary_font') || '0');
+    if (saved > 0) { fontLevel = saved; applyFont(saved); }
+  } catch(e) {}
 });
 </script>
 </body>
